@@ -29,12 +29,13 @@ sequenceDiagram
     server-->>browser: the JavaScript file
     deactivate server
 
-    Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server
+    Note right of browser: The browser starts executing the JavaScript.
+    Note right of browser: This code that fetches the JSON from the server.
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
     Note right of browser: New note is added to data.json on the server
-    server-->>browser: [{ "content": "HTML is easy", "date": "2023-1-1" }, ..,{"content":"new note","date":2023-12-27"} ]
+    server-->>browser: [..,..,{"content":"new note","date":2023-12-27"} ]
     deactivate server
 
 '''    
