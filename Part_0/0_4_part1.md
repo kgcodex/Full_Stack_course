@@ -1,6 +1,14 @@
 # Part 0 0.4: New note diagram
 Loading a page containing JavaScript
 
+![Image description](https://fullstackopen.com/static/15a8e6a030a5d6b3d2b4b459c3f2f10f/5a190/19m.png)
+
+# Part 0 0.4: User submit the new note using form
+Diagram is continued..  
+Its a HTTP POST request with status code 302. Its a URL redirect.  
+Browser do a new HTTP GET request to the address --notes.  
+This causes three more HTTP requests.
+
 ```mermaid
 sequenceDiagram
     participant browser
