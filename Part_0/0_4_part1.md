@@ -16,7 +16,7 @@ sequenceDiagram
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
-    server->>browser: URL Redirect
+    server-->>browser: URL Redirect
     deactivate server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
@@ -34,11 +34,13 @@ sequenceDiagram
     server-->>browser: the JavaScript file
     deactivate server
 
-    Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server
+    Note right of browser: The browser starts executing the JavaScript.
+    Note right of browser: This code that fetches the JSON from the server.
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
-    server-->>browser: [{ "content": "HTML is easy", "date": "2023-1-1" }, ... ]
+    Note right of browser: New note is added to data.json on the server
+    server-->>browser: [..,..,{"content":"new note","date":2023-12-27"} ]
     deactivate server
 
     Note right of browser: The browser executes the callback function that renders the notes
